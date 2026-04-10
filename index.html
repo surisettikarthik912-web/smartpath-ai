@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SMARTPATH AI</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .box {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>SMARTPATH AI 🎓</h1>
+<p>Your Smart Study & Career Guide</p>
+
+<div class="box">
+    <h2>📚 Subjects</h2>
+    <button onclick="showSubject('Arithmetic')">Arithmetic</button>
+    <button onclick="showSubject('Reasoning')">Reasoning</button>
+    <button onclick="showSubject('English')">English</button>
+    <button onclick="showSubject('Telugu')">Telugu</button>
+    <button onclick="showSubject('Hindi')">Hindi</button>
+    <button onclick="showSubject('Physics')">Physics</button>
+    <button onclick="showSubject('Coding')">Coding</button>
+</div>
+
+<div class="box">
+    <h2>🎯 Career Guidance</h2>
+    <button onclick="career()">What to do after Degree?</button>
+</div>
+
+<div class="box">
+    <h2>🎤 Voice Assistant</h2>
+    <button onclick="speak()">Click to Speak</button>
+</div>
+
+<p id="output"></p>
+
+<script>
+function showSubject(sub) {
+    document.getElementById("output").innerText = 
+    sub + " study materials coming soon...";
+}
+
+function career() {
+    document.getElementById("output").innerText = 
+    "After Degree: MBA, Jobs, Government Exams, Coding, Business options available.";
+}
+
+function speak() {
+    let msg = new SpeechSynthesisUtterance("Welcome to SmartPath AI");
+    speechSynthesis.speak(msg);
+}
+</script>
+
+</body>
+</html>
